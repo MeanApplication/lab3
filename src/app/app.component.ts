@@ -11,9 +11,10 @@ export class AppComponent {
   MyMovies: any = [];
 
   constructor(private movieService: MovieServiceService) {
-    this.movieService.GetMovieInformation().subscribe((data) => {
+    this.movieService.GetMovieInformation().subscribe(
+      (data) => {
       this.MyMovies = data.Search;
       console.log(this.MyMovies);
-    })
+    });
 }
 }
